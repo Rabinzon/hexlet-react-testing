@@ -27,8 +27,8 @@ describe('application', () => {
     secondTab.simulate('click');
     controls = wrapper.find('li[data-test="tab-control"]');
 
-    expect(controls.at(0)).toMatchSelector('[aria-selected="false"]');
-    expect(controls.at(1)).toMatchSelector('[aria-selected="true"]');
+    expect(controls.at(0)).toHaveProp('aria-selected', 'false');
+    expect(controls.at(1)).toHaveProp('aria-selected', 'true');
   });
 
   it('should add new tab', () => {
