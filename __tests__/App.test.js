@@ -35,18 +35,20 @@ describe('application', () => {
 
   it('should add new tab', () => {
     const wrapper = mount(<App />);
-    let $contents = wrapper.find('[data-test="tabs-content"]').children();
+    const addBtn = wrapper.find('[data-test="add-tab"]');
+    const removeBtn = wrapper.find('[data-test="remove-tab"]');
+    let tabsBox = wrapper.find('[data-test="tabs"]');
 
-    const $addBtn = wrapper.find('button[data-test="add-tab"]');
-    const $removeBtn = wrapper.find('button[data-test="remove-tab"]');
-
-    expect($contents).toHaveLength(tabContents.length);
-    $addBtn.simulate('click');
-    $contents = wrapper.find('[data-test="tabs-content"]').children();
-    expect($contents).toHaveLength(tabContents.length + 1);
-
-    $removeBtn.simulate('click');
-    $contents = wrapper.find('[data-test="tabs-content"]').children();
-    expect($contents).toHaveLength(tabContents.length);
+    expect(tabsBox).toContainMatchingElements(tabContents.length, 'li[data-test="tab-control"]');
+    
+    addBtn.simulate('click');
+    tabsBox = wrapper.find('[data-test="tabs"]');
+    
+    expect(tabsBox).toContainMatchingElements(tabContents.length + 1, 'li[data-test="tab-control"]');
+    
+    removeBtn.simulate('click');
+    tabsBox = wrapper.find('[data-test="tabs"]');
+    
+    expect(tabsBox).toContainMatchingElements(tabContents.length, 'li[data-test="tab-control"]');
   });
 });

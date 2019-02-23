@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -40,21 +40,21 @@ class MyTabs extends PureComponent {
     const { titles: stateTitles, contents: stateContents } = this.state;
 
     return (
-      <Fragment>
+      <div data-test='tabs'>
         <button onClick={this.handleAdd} data-test="add-tab">Add one tab</button>
         <button onClick={this.handleRemove} data-test="remove-tab">Remove one tab</button>
 
         <Tabs>
           <TabList>
-            {titles.map((title) => <Tab data-test="tab-control" key={title}>{title}</Tab>)}
-            {stateTitles.map((title) => <Tab data-test="tab-control" key={title}>{title}</Tab>)}
+            {titles.map(title => <Tab data-test="tab-control" key={title}>{title}</Tab>)}
+            {stateTitles.map(title => <Tab data-test="tab-control" key={title}>{title}</Tab>)}
           </TabList>
           <div data-test="tabs-content">
-            {contents.map((content) => <TabPanel data-test="tab-panel" key={content}>{content}</TabPanel>)}
-            {stateContents.map((content) => <TabPanel data-test="tab-panel" key={content}>{content}</TabPanel>)}
+            {contents.map(content => <TabPanel data-test="tab-panel" key={content}>{content}</TabPanel>)}
+            {stateContents.map(content => <TabPanel data-test="tab-panel" key={content}>{content}</TabPanel>)}
           </div>
         </Tabs>
-      </Fragment>
+      </div>
 
     );
   }
