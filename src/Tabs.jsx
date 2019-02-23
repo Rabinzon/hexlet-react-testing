@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { pure, compose } from 'recompose';
-import { map } from 'lodash-fp';
 
 import {
   Tab, Tabs, TabList, TabPanel,
@@ -11,9 +9,11 @@ import 'react-tabs/style/react-tabs.css';
 const MyTabs = props => (
   <Tabs>
     <TabList>
-      {map(title => <Tab key={title}>{title}</Tab>)(props.titles)}
+      {props.titles.map((title, i) => <Tab data-testid={`tab-${i}`} key={title}>{title}</Tab>)}
     </TabList>
-    {map(content => <TabPanel key={content}>{content}</TabPanel>)(props.contents)}
+    <div data-testid="tabs-content">
+      {props.contents.map((content, i) => <TabPanel data-testid={`tab-panel-${i}`} key={content}>{content}</TabPanel>)}
+    </div>
   </Tabs>
 );
 
@@ -22,6 +22,4 @@ MyTabs.propTypes = {
   contents: PropTypes.array.isRequired,
 };
 
-export default compose(
-  pure,
-)(MyTabs);
+export default MyTabs;

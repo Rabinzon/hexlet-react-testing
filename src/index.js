@@ -1,11 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { JssProvider } from 'react-jss';
-import App from './Containers/App';
+import App from './App';
 
-ReactDOM.render(
-  <JssProvider>
-    <App />
-  </JssProvider>,
-  document.getElementById('index'),
-);
+ReactDOM.render(<App />,
+  document.getElementById('index'));
