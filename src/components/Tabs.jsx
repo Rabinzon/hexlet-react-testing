@@ -9,10 +9,10 @@ import 'react-tabs/style/react-tabs.css';
 const MyTabs = props => (
   <Tabs>
     <TabList>
-      {props.titles.map((title, i) => <Tab data-testid={`tab-${i}`} key={title}>{title}</Tab>)}
+      {props.titles.map((title) => <Tab data-test={`tab-control`} key={title}>{title}</Tab>)}
     </TabList>
-    <div data-testid="tabs-content">
-      {props.contents.map(content => <TabPanel data-testid={'tab-panel'} key={content}>{content}</TabPanel>)}
+    <div data-test="tabs-content">
+      {props.contents.map(content => <TabPanel data-test={'tab-panel'} key={content}>{content}</TabPanel>)}
     </div>
   </Tabs>
 );

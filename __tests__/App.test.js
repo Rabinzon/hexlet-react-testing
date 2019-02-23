@@ -18,17 +18,18 @@ describe('application', () => {
     let content;
 
     const wrapper = mount(<App />);
-    const firstTab = wrapper.find('[data-testid="tab-0"]').at(0);
-    const secondTab = wrapper.find('[data-testid="tab-1"]').at(0);
+    const controls = wrapper.find('[data-test="tab-control"]').hostNodes();
+    const firstTab = controls.at(0);
+    const secondTab = controls.at(1);
 
-    content = wrapper.find('[data-testid="tabs-content"]');
+    content = wrapper.find('[data-test="tabs-content"]');
 
     expect(content.render()).toMatchSnapshot();
     secondTab.simulate('click');
-    content = wrapper.find('[data-testid="tabs-content"]');
+    content = wrapper.find('[data-test="tabs-content"]');
     expect(wrapper.render()).toMatchSnapshot();
     firstTab.simulate('click');
-    content = wrapper.find('[data-testid="tabs-content"]');
+    content = wrapper.find('[data-test="tabs-content"]');
     expect(content.render()).toMatchSnapshot();
   });
 });

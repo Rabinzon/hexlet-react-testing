@@ -2,12 +2,12 @@
 
 exports[`application should change tab 1`] = `
 <div
-  data-testid="tabs-content"
+  data-test="tabs-content"
 >
   <div
     aria-labelledby="react-tabs-4"
     class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-    data-testid="tab-panel"
+    data-test="tab-panel"
     id="react-tabs-5"
     role="tabpanel"
   >
@@ -16,7 +16,7 @@ exports[`application should change tab 1`] = `
   <div
     aria-labelledby="react-tabs-6"
     class="react-tabs__tab-panel"
-    data-testid="tab-panel"
+    data-test="tab-panel"
     id="react-tabs-7"
     role="tabpanel"
   />
@@ -41,7 +41,7 @@ exports[`application should change tab 2`] = `
         aria-disabled="false"
         aria-selected="false"
         class="react-tabs__tab"
-        data-testid="tab-0"
+        data-test="tab-control"
         id="react-tabs-4"
         role="tab"
       >
@@ -52,7 +52,7 @@ exports[`application should change tab 2`] = `
         aria-disabled="false"
         aria-selected="true"
         class="react-tabs__tab react-tabs__tab--selected"
-        data-testid="tab-1"
+        data-test="tab-control"
         id="react-tabs-6"
         role="tab"
         tabindex="0"
@@ -61,19 +61,19 @@ exports[`application should change tab 2`] = `
       </li>
     </ul>
     <div
-      data-testid="tabs-content"
+      data-test="tabs-content"
     >
       <div
         aria-labelledby="react-tabs-4"
         class="react-tabs__tab-panel"
-        data-testid="tab-panel"
+        data-test="tab-panel"
         id="react-tabs-5"
         role="tabpanel"
       />
       <div
         aria-labelledby="react-tabs-6"
         class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-        data-testid="tab-panel"
+        data-test="tab-panel"
         id="react-tabs-7"
         role="tabpanel"
       >
@@ -86,12 +86,12 @@ exports[`application should change tab 2`] = `
 
 exports[`application should change tab 3`] = `
 <div
-  data-testid="tabs-content"
+  data-test="tabs-content"
 >
   <div
     aria-labelledby="react-tabs-4"
     class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-    data-testid="tab-panel"
+    data-test="tab-panel"
     id="react-tabs-5"
     role="tabpanel"
   >
@@ -100,7 +100,7 @@ exports[`application should change tab 3`] = `
   <div
     aria-labelledby="react-tabs-6"
     class="react-tabs__tab-panel"
-    data-testid="tab-panel"
+    data-test="tab-panel"
     id="react-tabs-7"
     role="tabpanel"
   />
@@ -125,7 +125,7 @@ exports[`application should render components tree 1`] = `
         aria-disabled="false"
         aria-selected="true"
         class="react-tabs__tab react-tabs__tab--selected"
-        data-testid="tab-0"
+        data-test="tab-control"
         id="react-tabs-0"
         role="tab"
         tabindex="0"
@@ -137,7 +137,7 @@ exports[`application should render components tree 1`] = `
         aria-disabled="false"
         aria-selected="false"
         class="react-tabs__tab"
-        data-testid="tab-1"
+        data-test="tab-control"
         id="react-tabs-2"
         role="tab"
       >
@@ -145,12 +145,12 @@ exports[`application should render components tree 1`] = `
       </li>
     </ul>
     <div
-      data-testid="tabs-content"
+      data-test="tabs-content"
     >
       <div
         aria-labelledby="react-tabs-0"
         class="react-tabs__tab-panel react-tabs__tab-panel--selected"
-        data-testid="tab-panel"
+        data-test="tab-panel"
         id="react-tabs-1"
         role="tabpanel"
       >
@@ -159,7 +159,7 @@ exports[`application should render components tree 1`] = `
       <div
         aria-labelledby="react-tabs-2"
         class="react-tabs__tab-panel"
-        data-testid="tab-panel"
+        data-test="tab-panel"
         id="react-tabs-3"
         role="tabpanel"
       />
