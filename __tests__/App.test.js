@@ -2,7 +2,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import 'react-log-state';
 
-import App from '../src/App';
+import App from '../src/components/App';
 
 const tabContents = [
   'first tab content',
@@ -16,32 +16,37 @@ describe('application', () => {
   }); */
 
   it('should change tab', () => {
-    const wrapper = mount(<App />);
-    const $content = wrapper.find('[data-testid="tabs-content"]');
-    const $firstTab = wrapper.find('[data-testid="tab-0"]').at(0);
-    const $secondTab = wrapper.find('[data-testid="tab-1"]').at(0);
+    let content;
 
-    expect($content).toHaveText(tabContents[0]);
-    $secondTab.simulate('click');
-    expect($content).toHaveText(tabContents[1]);
-    $firstTab.simulate('click');
-    expect($content).toHaveText(tabContents[0]);
+    const wrapper = mount(<App />);
+
+    const controls = wrapper.find('[data-test="tab-control"]').hostNodes();
+    const firstTab = controls.at(0);
+    const secondTab = controls.at(1);
+
+    content = wrapper.find('[data-test="tabs-content"]');
+  
+    expect(content).toHaveText(tabContents[0]);
+    secondTab.simulate('click');
+    expect(content).toHaveText(tabContents[1]);
+    firstTab.simulate('click');
+    expect(content).toHaveText(tabContents[0]);
   });
 
   it('should add new tab', () => {
     const wrapper = mount(<App />);
-    let $contents = wrapper.find('[data-testid="tabs-content"]').children();
+    let $contents = wrapper.find('[data-test="tabs-content"]').children();
 
-    const $addBtn = wrapper.find('button[data-testid="add-tab"]');
-    const $removeBtn = wrapper.find('button[data-testid="remove-tab"]');
+    const $addBtn = wrapper.find('button[data-test="add-tab"]');
+    const $removeBtn = wrapper.find('button[data-test="remove-tab"]');
 
     expect($contents).toHaveLength(tabContents.length);
     $addBtn.simulate('click');
-    $contents = wrapper.find('[data-testid="tabs-content"]').children();
+    $contents = wrapper.find('[data-test="tabs-content"]').children();
     expect($contents).toHaveLength(tabContents.length + 1);
 
     $removeBtn.simulate('click');
-    $contents = wrapper.find('[data-testid="tabs-content"]').children();
+    $contents = wrapper.find('[data-test="tabs-content"]').children();
     expect($contents).toHaveLength(tabContents.length);
   });
 });

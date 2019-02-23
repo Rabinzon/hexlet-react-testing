@@ -41,17 +41,17 @@ class MyTabs extends PureComponent {
 
     return (
       <Fragment>
-        <button onClick={this.handleAdd} data-testid="add-tab">Add one tab</button>
-        <button onClick={this.handleRemove} data-testid="remove-tab">Remove one tab</button>
+        <button onClick={this.handleAdd} data-test="add-tab">Add one tab</button>
+        <button onClick={this.handleRemove} data-test="remove-tab">Remove one tab</button>
 
         <Tabs>
           <TabList>
-            {titles.map((title, i) => <Tab data-testid={`tab-${i}`} key={title}>{title}</Tab>)}
-            {stateTitles.map((title, i) => <Tab data-testid={`tab-${i + 2}`} key={title}>{title}</Tab>)}
+            {titles.map((title) => <Tab data-test="tab-control" key={title}>{title}</Tab>)}
+            {stateTitles.map((title) => <Tab data-test="tab-control" key={title}>{title}</Tab>)}
           </TabList>
-          <div data-testid="tabs-content">
-            {contents.map((content, i) => <TabPanel data-testid={`tab-panel-${i}`} key={content}>{content}</TabPanel>)}
-            {stateContents.map((content, i) => <TabPanel data-testid={`tab-panel-${i + 2}`} key={content}>{content}</TabPanel>)}
+          <div data-test="tabs-content">
+            {contents.map((content) => <TabPanel data-test="tab-panel" key={content}>{content}</TabPanel>)}
+            {stateContents.map((content) => <TabPanel data-test="tab-panel" key={content}>{content}</TabPanel>)}
           </div>
         </Tabs>
       </Fragment>
