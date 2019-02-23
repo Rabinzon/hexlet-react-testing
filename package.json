@@ -7,7 +7,8 @@
     "start": " webpack-dev-server --open --mode development --hot",
     "build": " webpack --mode production",
     "lint": "eslint src/**/*.js",
-    "test": "jest __tests__"
+    "test": "jest __tests__ --DEBUG=app:*",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand"
   },
   "author": "",
   "license": "ISC",
@@ -54,6 +55,7 @@
     "jest": "^24.1.0",
     "jest-environment-enzyme": "^7.0.1",
     "jest-enzyme": "^7.0.1",
+    "react-log-state": "^0.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",

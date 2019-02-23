@@ -12,7 +12,7 @@ const tabContents = [
   'second tab content',
 ];
 
-const App = ({ titles = tabTitles, contents = tabContents}) => (
+const App = ({ titles = tabTitles, contents = tabContents }) => (
   <div>
     <p>
       Hello world!
@@ -26,7 +26,7 @@ const App = ({ titles = tabTitles, contents = tabContents}) => (
 
 App.propTypes = {
   titles: PropTypes.array,
-  contents: PropTypes.array
+  contents: PropTypes.array,
 };
 
 
