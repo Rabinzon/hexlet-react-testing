@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
-import App from '../src/App';
+import App from '../src/components/App';
 
 const tabContents = [
   'first tab content',
@@ -10,20 +10,25 @@ const tabContents = [
 
 describe('application', () => {
   it('should render components tree', () => {
-    const wrapper = render(<App contents={tabContents} />);
-    expect(wrapper).toMatchSnapshot();
+    const wrapper = mount(<App contents={tabContents} />);
+    expect(wrapper.render()).toMatchSnapshot();
   });
 
   it('should change tab', () => {
-    const wrapper = mount(<App />);
-    const $content = wrapper.find('[data-testid="tabs-content"]');
-    const $firstTab = wrapper.find('li[data-testid="tab-0"]');
-    const $secondTab = wrapper.find('li[data-testid="tab-1"]');
+    let content;
 
-    expect($content).toHaveText(tabContents[0]);
-    $secondTab.simulate('click');
-    expect($content).toHaveText(tabContents[1]);
-    $firstTab.simulate('click');
-    expect($content).toHaveText(tabContents[0]);
+    const wrapper = mount(<App />);
+    const firstTab = wrapper.find('[data-testid="tab-0"]').at(0);
+    const secondTab = wrapper.find('[data-testid="tab-1"]').at(0);
+
+    content = wrapper.find('[data-testid="tabs-content"]');
+
+    expect(content.render()).toMatchSnapshot();
+    secondTab.simulate('click');
+    content = wrapper.find('[data-testid="tabs-content"]');
+    expect(wrapper.render()).toMatchSnapshot();
+    firstTab.simulate('click');
+    content = wrapper.find('[data-testid="tabs-content"]');
+    expect(content.render()).toMatchSnapshot();
   });
 });

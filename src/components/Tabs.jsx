@@ -12,7 +12,7 @@ const MyTabs = props => (
       {props.titles.map((title, i) => <Tab data-testid={`tab-${i}`} key={title}>{title}</Tab>)}
     </TabList>
     <div data-testid="tabs-content">
-      {props.contents.map((content, i) => <TabPanel data-testid={`tab-panel-${i}`} key={content}>{content}</TabPanel>)}
+      {props.contents.map(content => <TabPanel data-testid={'tab-panel'} key={content}>{content}</TabPanel>)}
     </div>
   </Tabs>
 );

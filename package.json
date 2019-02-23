@@ -7,7 +7,8 @@
     "start": " webpack-dev-server --open --mode development --hot",
     "build": " webpack --mode production",
     "lint": "eslint src/**/*.js",
-    "test": "jest __tests__"
+    "test": "jest __tests__",
+    "test:debug": "node --inspect node_modules/.bin/jest --runInBand __tests__"
   },
   "author": "",
   "license": "ISC",
@@ -46,6 +47,7 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-import-resolver-webpack": "^0.11.0",
     "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-lodash-fp": "^2.2.0-a1",
     "eslint-plugin-react": "^7.12.4",
