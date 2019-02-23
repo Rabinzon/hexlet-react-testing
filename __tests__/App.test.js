@@ -10,27 +10,25 @@ const tabContents = [
 ];
 
 describe('application', () => {
+  beforeAll(() => {
+    global.ReactLogState.logAll();
+  });
   /* it('should render components tree', () => {
     const wrapper = render(<App contents={tabContents} />);
     expect(wrapper).toMatchSnapshot();
   }); */
 
   it('should change tab', () => {
-    let content;
-
     const wrapper = mount(<App />);
 
-    const controls = wrapper.find('[data-test="tab-control"]').hostNodes();
-    const firstTab = controls.at(0);
+    let controls = wrapper.find('li[data-test="tab-control"]');
     const secondTab = controls.at(1);
 
-    content = wrapper.find('[data-test="tabs-content"]');
-  
-    expect(content).toHaveText(tabContents[0]);
     secondTab.simulate('click');
-    expect(content).toHaveText(tabContents[1]);
-    firstTab.simulate('click');
-    expect(content).toHaveText(tabContents[0]);
+    controls = wrapper.find('li[data-test="tab-control"]');
+
+    expect(controls.at(0)).toMatchSelector('[aria-selected="false"]');
+    expect(controls.at(1)).toMatchSelector('[aria-selected="true"]');
   });
 
   it('should add new tab', () => {
@@ -40,15 +38,15 @@ describe('application', () => {
     let tabsBox = wrapper.find('[data-test="tabs"]');
 
     expect(tabsBox).toContainMatchingElements(tabContents.length, 'li[data-test="tab-control"]');
-    
+
     addBtn.simulate('click');
     tabsBox = wrapper.find('[data-test="tabs"]');
-    
+
     expect(tabsBox).toContainMatchingElements(tabContents.length + 1, 'li[data-test="tab-control"]');
-    
+
     removeBtn.simulate('click');
     tabsBox = wrapper.find('[data-test="tabs"]');
-    
+
     expect(tabsBox).toContainMatchingElements(tabContents.length, 'li[data-test="tab-control"]');
   });
 });
