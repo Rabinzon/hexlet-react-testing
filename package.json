@@ -64,13 +64,17 @@
     "webpack-dev-server": "^3.2.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "js-cookie": "^2.2.0",
     "lodash-fp": "^0.10.4",
+    "nock": "^10.0.6",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-jss": "^8.6.1",
     "react-tabs": "^3.0.0",
-    "recompose": "^0.30.0"
+    "recompose": "^0.30.0",
+    "xml-js": "^1.6.11",
+    "xml2json": "^0.11.2"
   }
 }
