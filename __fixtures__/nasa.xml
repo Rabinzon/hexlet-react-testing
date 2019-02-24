@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?> <rss version="2.0" xml:base="http://www.nasa.gov/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/"> <channel> <title>NASA Breaking News</title>
+    <description>A RSS news feed containing the latest NASA news articles and press releases.</description>
+    <link>http://www.nasa.gov/</link>
+    <atom:link rel="self" href="http://www.nasa.gov/rss/dyn/breaking_news.rss" />
+    <language>en-us</language>
+    <managingEditor>jim.wilson@nasa.gov</managingEditor>
+    <webMaster>brian.dunbar@nasa.gov</webMaster>
+    <docs>http://blogs.harvard.edu/tech/rss</docs>
+    <item> <title>NASA Awards Support Services Contract for Exploration Ground Systems Program</title>
+        <link>http://www.nasa.gov/press-release/nasa-awards-support-services-contract-for-exploration-ground-systems-program</link>
+        <description>NASA has selected LJT &amp; Associates, Incorporated of Columbia, Maryland, to provide support services to the Exploration Ground Systems (EGS) Program at the agency’s Kennedy Space Center in Florida.</description>
+        <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/nasa-logo-web-rgb.jpg?itok=t5eZp57o" length="189751" type="image/jpeg" />
+        <guid isPermaLink="false">http://www.nasa.gov/press-release/nasa-awards-support-services-contract-for-exploration-ground-systems-program</guid>
+        <pubDate>Fri, 22 Feb 2019 16:00 EST</pubDate>
+        <source url="http://www.nasa.gov/rss/dyn/breaking_news.rss">NASA Breaking News</source>
+        <dc:identifier>440265</dc:identifier>
+    </item>
+    <item> <title>NASA Renames Facility in Honor of ‘Hidden Figure’ Katherine Johnson</title>
+        <link>http://www.nasa.gov/press-release/nasa-renames-facility-in-honor-of-hidden-figure-katherine-johnson</link>
+        <description>NASA has redesignated its Independent Verification and Validation (IV&amp;V) Facility in Fairmont, West Virginia, as the Katherine Johnson Independent Verification and Validation Facility, in honor of the West Virginia native and NASA &quot;hidden figure.&quot;</description>
+        <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/ivv.jpg?itok=B8MV4Nmj" length="244885" type="image/jpeg" />
+        <guid isPermaLink="false">http://www.nasa.gov/press-release/nasa-renames-facility-in-honor-of-hidden-figure-katherine-johnson</guid>
+        <pubDate>Fri, 22 Feb 2019 12:23 EST</pubDate>
+        <source url="http://www.nasa.gov/rss/dyn/breaking_news.rss">NASA Breaking News</source>
+        <dc:identifier>440246</dc:identifier>
+    </item>
+    <item> <title>NASA Administrator Statement on Israeli Moon Mission</title>
+        <link>http://www.nasa.gov/press-release/nasa-administrator-statement-on-israeli-moon-mission</link>
+        <description>The following is a statement from NASA Administrator Jim Bridenstine on Thursday’s launch of Israel’s first mission beyond Earth’s orbit. SpaceIL’s lander blasted off from Cape Canaveral Air Force Station in Florida, and now is on its way to becoming the first commercial lander to reach the Moon’s surface.</description>
+        <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/edu_srch_amazing_space_the_moon.png?itok=lGLHPkI4" length="820931" type="image/png" />
+        <guid isPermaLink="false">http://www.nasa.gov/press-release/nasa-administrator-statement-on-israeli-moon-mission</guid>
+        <pubDate>Thu, 21 Feb 2019 21:20 EST</pubDate>
+        <source url="http://www.nasa.gov/rss/dyn/breaking_news.rss">NASA Breaking News</source>
+        <dc:identifier>440215</dc:identifier>
+    </item>
+    <item> <title>NASA Selects Experiments for Possible Lunar Flights in 2019</title>
+        <link>http://www.nasa.gov/press-release/nasa-selects-experiments-for-possible-lunar-flights-in-2019</link>
+        <description>NASA has selected 12 science and technology demonstration payloads to fly to the Moon as early as the end of this year, dependent upon the availability of commercial landers.</description>
+        <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/edu_srch_amazing_space_the_moon.png?itok=lGLHPkI4" length="820931" type="image/png" />
+        <guid isPermaLink="false">http://www.nasa.gov/press-release/nasa-selects-experiments-for-possible-lunar-flights-in-2019</guid>
+        <pubDate>Thu, 21 Feb 2019 15:50 EST</pubDate>
+        <source url="http://www.nasa.gov/rss/dyn/breaking_news.rss">NASA Breaking News</source>
+        <dc:identifier>440205</dc:identifier>
+    </item>
+    <item> <title>NASA-Funded Research Creates DNA-like Molecule to Aid Search for Alien Life</title>
+        <link>http://www.nasa.gov/press-release/nasa-funded-research-creates-dna-like-molecule-to-aid-search-for-alien-life</link>
+        <description>In a research breakthrough funded by NASA, scientists have synthesized a molecular system that, like DNA, can store and transmit information. This unprecedented feat suggests there could be an alternative to DNA-based life, as we know it on Earth – a genetic system for life that may be possible on other worlds.</description>
+        <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/hachimoji-dna-horizontal.jpg?itok=fGCbG9ib" length="267851" type="image/jpeg" />
+        <guid isPermaLink="false">http://www.nasa.gov/press-release/nasa-funded-research-creates-dna-like-molecule-to-aid-search-for-alien-life</guid>
+        <pubDate>Thu, 21 Feb 2019 15:23 EST</pubDate>
+        <source url="http://www.nasa.gov/rss/dyn/breaking_news.rss">NASA Breaking News</source>
+        <dc:identifier>440187</dc:identifier>
+    </item>
+    <item> <title>NASA to Provide Coverage of SpaceX Commercial Crew Flight Test</title>
+        <link>http://www.nasa.gov/press-release/nasa-to-provide-coverage-of-spacex-commercial-crew-flight-test</link>
+        <description>NASA will provide coverage of the upcoming prelaunch and launch activities for the SpaceX Demo-1 flight test to the International Space Station for the agency’s Commercial Crew Program, which is working with the U.S. aerospace industry to launch astronauts on American rockets and spacecraft from American soil for the first time since 2011.</description>
+        <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/dragonliftoff_1.jpg?itok=OkqA7J1L" length="4684261" type="image/jpeg" />
+        <guid isPermaLink="false">http://www.nasa.gov/press-release/nasa-to-provide-coverage-of-spacex-commercial-crew-flight-test</guid>
+        <pubDate>Wed, 20 Feb 2019 15:18 EST</pubDate>
+        <source url="http://www.nasa.gov/rss/dyn/breaking_news.rss">NASA Breaking News</source>
+        <dc:identifier>440108</dc:identifier>
+    </item>
+    <item> <title>New NASA Book Shares Beauty of Earth from Space</title>
+        <link>http://www.nasa.gov/press-release/new-nasa-book-shares-beauty-of-earth-from-space</link>
+        <description>Swirling white clouds, deep blue oceans and multicolored landscapes bring to life the pages of NASA’s new 168-page book “Earth,” a collection of dramatic images captured by Earth-observing satellites. The book is available now in hardcover and ebook, and online with interactive features.</description>
+        <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/book_cover.jpg?itok=7Vx4eGB5" length="314014" type="image/jpeg" />
+        <guid isPermaLink="false">http://www.nasa.gov/press-release/new-nasa-book-shares-beauty-of-earth-from-space</guid>
+        <pubDate>Wed, 20 Feb 2019 13:52 EST</pubDate>
+        <source url="http://www.nasa.gov/rss/dyn/breaking_news.rss">NASA Breaking News</source>
+        <dc:identifier>440096</dc:identifier>
+    </item>
+    <item> <title>NASA Tests Urban Drone Traffic Management in Nevada, Texas</title>
+        <link>http://www.nasa.gov/press-release/nasa-tests-urban-drone-traffic-management-in-nevada-texas</link>
+        <description>NASA has selected two organizations to host the final phase of its four-year series of increasingly complicated technical demonstrations involving small Unmanned Aircraft Systems (UAS), commonly known as drones.</description>
+        <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/tcl4-v3.jpg?itok=7BBhZVsd" length="570720" type="image/jpeg" />
+        <guid isPermaLink="false">http://www.nasa.gov/press-release/nasa-tests-urban-drone-traffic-management-in-nevada-texas</guid>
+        <pubDate>Tue, 19 Feb 2019 14:15 EST</pubDate>
+        <source url="http://www.nasa.gov/rss/dyn/breaking_news.rss">NASA Breaking News</source>
+        <dc:identifier>440028</dc:identifier>
+    </item>
+    <item> <title>Florida Students to Speak with NASA Astronaut Aboard International Space Station</title>
+        <link>http://www.nasa.gov/press-release/florida-students-to-speak-with-nasa-astronaut-aboard-international-space-station</link>
+        <description>University and high school students from Florida will have an opportunity to talk with a NASA astronaut on the International Space Station next week.</description>
+        <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/m19-009.png?itok=_jkUQ-jW" length="1933562" type="image/png" />
+        <guid isPermaLink="false">http://www.nasa.gov/press-release/florida-students-to-speak-with-nasa-astronaut-aboard-international-space-station</guid>
+        <pubDate>Fri, 15 Feb 2019 09:32 EST</pubDate>
+        <source url="http://www.nasa.gov/rss/dyn/breaking_news.rss">NASA Breaking News</source>
+        <dc:identifier>439865</dc:identifier>
+    </item>
+    <item> <title>NASA Selects New Mission to Explore Origins of Universe</title>
+        <link>http://www.nasa.gov/press-release/nasa-selects-new-mission-to-explore-origins-of-universe</link>
+        <description>NASA has selected a new space mission that will help astronomers understand both how our universe evolved and how common are the ingredients for life in our galaxy’s planetary systems.</description>
+        <enclosure url="http://www.nasa.gov/sites/default/files/styles/1x1_cardfeed/public/thumbnails/image/spherex.jpg?itok=jH9V0mrI" length="1492917" type="image/jpeg" />
+        <guid isPermaLink="false">http://www.nasa.gov/press-release/nasa-selects-new-mission-to-explore-origins-of-universe</guid>
+        <pubDate>Wed, 13 Feb 2019 16:00 EST</pubDate>
+        <source url="http://www.nasa.gov/rss/dyn/breaking_news.rss">NASA Breaking News</source>
+        <dc:identifier>439794</dc:identifier>
+    </item>
+</channel>
+</rss>

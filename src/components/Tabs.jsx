@@ -26,6 +26,7 @@ class MyTabs extends PureComponent {
     this.state = {
       titles: [],
       contents: [],
+      value: '',
       isSubmitting: false,
       tabIndex: Number(props.storage.get('tabIndex') || 0),
     };
@@ -84,16 +85,13 @@ class MyTabs extends PureComponent {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const input = e.target[0];
-    const { value } = input;
+    const { value } = this.state;
 
     this.setState({
       isSubmitting: true,
     }, () => {
-      axios.get(new URL(`${urls.corsProxy}/${value}`))
+      axios.get(`${urls.corsProxy}/${value}`)
         .then(({ data }) => {
-          console.log('data', data);
-
           const result = JSON.parse(parser.xml2json(data, { compact: true, spaces: 2 }));
           const { rss: { channel: { title: { _text: text }, item } } } = result;
           this.handleAddFeed(text, item);
@@ -107,11 +105,15 @@ class MyTabs extends PureComponent {
     });
   }
 
+  handleChange = ({ target: { value } }) => {
+    this.setState({ value });
+  }
+
   renderFeed = items => (
     <ul>
       {items.map(({
         link: { _text: href }, title: { _text: name },
-      }, i) => <li key={i}><a href={href}>{name}</a></li>)
+      }, i) => <li data-test="feed-item" key={i}><a href={href}>{name}</a></li>)
       }
     </ul>
   )
@@ -125,8 +127,8 @@ class MyTabs extends PureComponent {
         <button onClick={this.handleAdd} data-test="add-tab">Add one tab</button>
         <button onClick={this.handleRemove} data-test="remove-tab">Remove one tab</button>
         <br/>
-        <form onSubmit={this.handleSubmit}>
-          <input data-test='add-rss-input' disabled={this.state.isSubmitting} type="text"/>
+        <form onSubmit={this.handleSubmit} data-test='add-rss-form'>
+          <input value={this.state.value} onChange={this.handleChange} data-test='add-rss-input' disabled={this.state.isSubmitting} type="text"/>
           <button data-test='add-rss-button' disabled={this.state.isSubmitting}>add feed</button>
           {this.state.isSubmitting && 'Loading...'}
         </form>
