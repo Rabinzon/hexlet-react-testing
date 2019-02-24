@@ -12,12 +12,13 @@ const tabContents = [
   'second tab content',
 ];
 
-const App = ({ titles = tabTitles, contents = tabContents }) => (
+const App = ({ titles = tabTitles, contents = tabContents, storage }) => (
   <div>
     <p>
       Hello world!
     </p>
     <Tabs
+      storage={storage}
       titles={titles}
       contents={contents}
     />
@@ -27,6 +28,10 @@ const App = ({ titles = tabTitles, contents = tabContents }) => (
 App.propTypes = {
   titles: PropTypes.array,
   contents: PropTypes.array,
+  storage: PropTypes.shape({
+    get: PropTypes.func.isRequired,
+    set: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
 

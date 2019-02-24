@@ -9,6 +9,7 @@ const tabContents = [
   'second tab content',
 ];
 
+
 describe('application', () => {
   beforeAll(() => {
     global.ReactLogState.logAll();
@@ -19,7 +20,11 @@ describe('application', () => {
   }); */
 
   it('should change tab', () => {
-    const wrapper = mount(<App />);
+    const storage = {
+      get: () => 0,
+      set: () => {},
+    };
+    const wrapper = mount(<App storage={storage} />);
 
     let controls = wrapper.find('li[data-test="tab-control"]');
     const secondTab = controls.at(1);
@@ -32,7 +37,12 @@ describe('application', () => {
   });
 
   it('should add new tab', () => {
-    const wrapper = mount(<App />);
+    const storage = {
+      get: () => 0,
+      set: () => {},
+    };
+
+    const wrapper = mount(<App storage={storage} />);
     const addBtn = wrapper.find('[data-test="add-tab"]');
     const removeBtn = wrapper.find('[data-test="remove-tab"]');
     let tabsBox = wrapper.find('[data-test="tabs"]');
@@ -48,5 +58,31 @@ describe('application', () => {
     tabsBox = wrapper.find('[data-test="tabs"]');
 
     expect(tabsBox).toContainMatchingElements(tabContents.length, 'li[data-test="tab-control"]');
+  });
+
+  it('should remember last opened tab', () => {
+    const storedData = {};
+
+    const storage = {
+      get: key => storedData[key],
+      set: (key, value) => {
+        storedData[key] = value;
+      },
+    };
+
+    let wrapper = mount(<App storage={storage} />);
+    let controls = wrapper.find('li[data-test="tab-control"]');
+    const secondTab = controls.at(1);
+
+    expect(controls.at(0)).toMatchSelector('[aria-selected="true"]');
+    expect(controls.at(1)).toMatchSelector('[aria-selected="false"]');
+
+    secondTab.simulate('click');
+
+    wrapper = mount(<App storage={storage} />);
+    controls = wrapper.find('li[data-test="tab-control"]');
+
+    expect(controls.at(0)).toMatchSelector('[aria-selected="false"]');
+    expect(controls.at(1)).toMatchSelector('[aria-selected="true"]');
   });
 });
