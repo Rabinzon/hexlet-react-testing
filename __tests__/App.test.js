@@ -139,6 +139,7 @@ describe('application', () => {
     await delay(100);
     wrapper.update();
     controls = s.tabControls();
+    expect(s.tabs()).toContainMatchingElements(3, 'li[data-test="tab-control"]');
     expect(controls.at(2)).toHaveProp('aria-selected', 'true');
     const { rss: { channel: { title: { _text: text } } } } = data;
 
